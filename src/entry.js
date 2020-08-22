@@ -24,20 +24,20 @@ controls.update();
 var gltfLoader = new GLTFLoader();
 // Load a glTF resource
 gltfLoader.load(
-	// resource URL
-	'src/objects/Sphere/gtLF/sphere.glb',
-	// called when the resource is loaded
-	function ( gltf ) {
-		scene.add( gltf.scene );
-	},
-	// called while loading is progressing
-	function ( xhr ) {
-		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
-	},
-	// called when loading has errors
-	function ( error ) {
-		console.log( 'An error happened' );
-	}
+  // resource URL
+  'src/objects/Sphere/gtLF/sphere.glb',
+  // called when the resource is loaded
+  function (gltf) {
+    scene.add(gltf.scene);
+  },
+  // called while loading is progressing
+  function (xhr) {
+    console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+  },
+  // called when loading has errors
+  function (error) {
+    console.log('An error happened', error);
+  }
 );
 
 // camera
